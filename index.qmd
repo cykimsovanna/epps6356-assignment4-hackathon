@@ -1,6 +1,143 @@
 ---
-title: "EPPS 6356 Assignment 4 Hackathon"
-format: html
+title: "EPPS 6356 Assignment 4: 48-Hour Chart Hackathon"
+subtitle: "Happy Planet Index, 2025"
+author:
+  - name: Rose Mikame
+  - name: Susan Mohammad
+  - name: Chakrayuddh Kimsovanna
+date: "October 2, 2026"
+
+format:
+  html:
+    toc: true
+    toc-title: "Contents"
+    page-layout: full
+
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-By Rose, Susan & Yuddh
+## Chart 1 — Variable-Width Column Chart
+
+```{r}
+#| fig-width: 8
+#| fig-height: 6
+#| out-width: "100%"
+#| fig-align: center
+
+source("R_codes/chart1_variable_width.R")
+chart1
+```
+
+<details>
+<summary>Show R code</summary>
+
+```{r}
+#| results: asis
+
+code <- readLines("R_codes/chart1_variable_width.R")
+
+cat(
+  "```r\n",
+  paste(code, collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+</details>
+
+
+## Chart 2 — Table with Embedded Charts
+
+```{r}
+source("R_codes/chart2_embedded_table.R")
+chart2
+```
+
+<details>
+<summary>Show R code</summary>
+
+```{r}
+#| results: asis
+
+code <- readLines("R_codes/chart2_embedded_table.R")
+
+cat(
+  "```r\n",
+  paste(code, collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+</details>
+
+
+## Chart 3 — Top and Bottom HPI Countries
+
+```{r}
+#| fig-width: 8
+#| fig-height: 11
+#| out-width: "100%"
+#| fig-align: center
+
+source("R_codes/chart3_bar.R")
+chart3
+```
+
+<details>
+<summary>Show R code</summary>
+
+```{r}
+#| results: asis
+
+code <- readLines("R_codes/chart3_bar.R")
+
+cat(
+  "```r\n",
+  paste(code, collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+</details>
+
+
+## Chart 4 — Ecological Footprint by Region
+
+```{r}
+#| fig-width: 8
+#| fig-height: 6
+#| out-width: "100%"
+#| fig-align: center
+
+source("R_codes/chart4_column.R")
+chart4
+```
+
+<details>
+<summary>Show R code</summary>
+
+```{r}
+#| results: asis
+
+code <- readLines("R_codes/chart4_column.R")
+
+cat(
+  "```r\n",
+  paste(code, collapse = "\n"),
+  "\n```\n",
+  sep = ""
+)
+```
+
+</details>
+
+
+## Project Files and Sources
+
+The project repository can be found [here](https://github.com/cykimsovanna/epps6356-assignment4-hackathon). The repository contains the R scripts, dataset used, AI disclosure, session information, and other supporting project files.
