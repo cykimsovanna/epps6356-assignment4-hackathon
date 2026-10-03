@@ -20,7 +20,8 @@ ggplot(
   geom_col(width = 0.65) +
   scale_fill_manual(values = region_colors) +
   labs(
-    title = "Average Ecological Footprint by Region in 2025",
+    title = "Ecological Footprints Vary Widely Across Global Regions",
+    subtitle = "U.S., Canada & Oceania have the highest average ecological footprint in 2025",
     x = NULL,
     y = "Ecological Footprint (gha)",
     fill = "Region",
@@ -28,7 +29,11 @@ ggplot(
   ) +
   theme_labels +
   theme(
-    axis.text.x = element_text(angle = 30, hjust = 1),
-    legend.position = "none"
+    axis.text.x = element_text(
+      angle = 25,
+      hjust = 1,
+      vjust = 1
+    ),
+    legend.position = "none",
+    plot.margin = margin(10, 10, 10, 25)
   )
-
