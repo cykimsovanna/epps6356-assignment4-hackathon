@@ -3,13 +3,13 @@ library(showtext)
 
 region_colors <- c(
   "Latin America & Caribbean" = "goldenrod1",
-  "U.S., Canada & Oceania" = "dodgerblue3",
+  "U.S., Canada & Oceania" = "dodgerblue1",
   "Western Europe" = "royalblue4",
-  "Middle East & North Africa" = "plum",
+  "Middle East & North Africa" = "plum1",
   "Sub-Saharan Africa" = "firebrick3",
-  "South Asia" = "mediumpurple1",
-  "Eastern Europe & Central Asia" = "seagreen4",
-  "East & Southeast Asia" = "yellowgreen"
+  "South Asia" = "forestgreen",
+  "Eastern Europe & Central Asia" = "paleturquoise3",
+  "East & Southeast Asia" = "grey26"
 )
 
 font_add_google("Quattrocento", "quattrocento")
