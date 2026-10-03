@@ -83,3 +83,14 @@ table_embedded_chart <- table_embedded_chart |>
   )
 
 table_embedded_chart
+
+table_embedded_chart <- table_embedded_chart |>
+  gtExtras::gt_plt_bar(
+    column = `Life Satisfaction`,
+    color = "goldenrod1",
+    scale_type = "number",
+    accuracy = 0.1,
+    width = 100
+  )
+
+table_embedded_chart
