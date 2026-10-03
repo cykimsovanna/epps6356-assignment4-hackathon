@@ -40,7 +40,7 @@ table_2025 <- table_2025[
 chart2 <- table_2025 |>
   gt() |>
   tab_header(
-    title = "Wellbeing and Ecological Outcomes Vary Across the 20 Most Populous Countries"
+    title = "Wellbeing and Ecological Outcomes Vary Across the 20 Most Populous Countries",
   ) |>
   fmt_number(
     columns = Population,

@@ -3,7 +3,7 @@ library(ggplot2)
 source("R_codes/cleaning_data.R")
 source("R_codes/theme_settings.R")
 
-# 1. Summarize region metrics
+# Summarize HPI and population by region
 region_summary <- hpi_2025 |>
   dplyr::group_by(Region) |>
   dplyr::summarise(
@@ -17,7 +17,7 @@ region_summary <- hpi_2025 |>
     xcenter = (xmin + xmax) / 2
   )
 
-# 2. Build Chart 1
+# Chart 1
 chart1 <- ggplot(region_summary) +
   geom_rect(
     aes(
@@ -35,7 +35,7 @@ chart1 <- ggplot(region_summary) +
     labels = function(x) paste0(round(x / 1e6, 1), "B")
   ) +
   labs(
-    title = "Population Size and Wellbeing Vary Across Global Regions in 2025",
+    title = "Larger Populations Do Not Necessarily Mean Higher HPI Scores in 2025",
     subtitle = "Column width represents total population; height represents average HPI score",
     x = "Cumulative Population (Billions)",
     y = "Average HPI Score",

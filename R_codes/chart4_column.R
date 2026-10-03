@@ -22,7 +22,7 @@ chart4 <- ggplot(
   geom_col(width = 0.65) +
   scale_fill_manual(values = region_colors) +
   labs(
-    title = "The West Has the Highest Average Ecological Footprint in 2025",
+    title = "The West Has the Largest Average Ecological Footprints in 2025",
     x = NULL,
     y = "Ecological Footprint (gha)",
     fill = "Region",
