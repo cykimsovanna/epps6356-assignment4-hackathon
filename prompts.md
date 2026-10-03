@@ -1,9 +1,35 @@
-AI Prompt Documentation
+## AI Prompt Documentation
 
 
-Susan: No prompts were used
+# Susan: 
+I have the following data preparation code, color palette, and custom theme setup from my teammate in R:
+R
+hpi_2025 <- subset(hpi_all, Year == 2025)
+hpi_2025$Region <- factor(
+    hpi_2025$Continent,
+    levels = 1:8,
+    labels = c(
+        "Latin America & Caribbean",
+        "U.S., Canada & Oceania",
+        "Western Europe",
+        "Middle East & North Africa",
+        "Sub-Saharan Africa",
+        "South Asia",
+        "Eastern Europe & Central Asia",
+        "East & Southeast Asia"    )
+)
+hpi_2025_no_na <- subset(hpi_2025, !is.na(HPI))
+library(ggplot2)
+library(showtext)
+region_colors <- c(...)
+font_add_google("Quattrocento", "quattrocento")
+font_add_google("Inter", "inter")
+showtext_auto()
+theme_labels <- theme_minimal(...) + theme(...)
+ 
+My assigned task for the team project is to build Chart 1 (Variable-Width Column Chart) where column width represents total population per region and column height represents mean HPI score. How do I construct this plot in R using ggplot2::geom_rect() while applying my team's theme and color palette?"
 
-Rose: 
+# Rose: 
 Chart 1 – Variable-Width Column Chart
 Tool: ChatGPT
 Model: GPT-5.6 Sol
@@ -56,7 +82,7 @@ ChatGPT was also used for procedural assistance with GitHub Desktop, including i
 
 
 
-Yuddh:
+# Yuddh:
 
 # EPPS 6356 Assignment 4 — AI Exchange Record
 
@@ -66,7 +92,7 @@ Yuddh:
 **Model:** GPT-5.6 Sol  
 **Dates used:** October 1–2, 2026  
 
-## Important note on transcript completeness
+# Important note on transcript completeness
 
 This document collects the assignment-related AI exchange that can be recovered from the working conversation and retained chat context. Personal discussion and unrelated team-member discussion have been omitted.
 
@@ -78,11 +104,11 @@ The purpose of AI use was to help interpret the assignment, scaffold R code, deb
 
 # 1. Interpreting the assignment and choosing a common year
 
-### Reconstructed prompt summary
+# Reconstructed prompt summary
 
 The user asked what Assignment 4 required, how the four chart types should be approached, and whether the HPI data should be plotted across all years or using a common snapshot.
 
-### Assistant response / generation
+# Assistant response / generation
 
 The assistant summarized the assignment as four separate R visualizations using the Happy Planet Index data:
 
