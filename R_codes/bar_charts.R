@@ -6,7 +6,7 @@ source("R_codes/cleaning_data.R")
 
 hpi_2025_sorted <- hpi_2025_no_na[order(hpi_2025_no_na$HPI),]
 
-hpi_2025_sorted_top20 <-tail(hpi_2025_sorted, 20)
+hpi_2025_sorted_top20 <- tail(hpi_2025_sorted, 20)
 hpi_2025_sorted_bottom20 <- head(hpi_2025_sorted, 20)
 
 hpi_2025_top_bottom20 <- rbind(
@@ -23,8 +23,8 @@ ggplot(
     x = HPI,
     y = forcats::fct_reorder(Country, HPI),
     fill = Region
-    )
-  ) +
+  )
+) +
   geom_col(width = 0.8) +
   geom_hline(
     yintercept = 20.5,
@@ -34,13 +34,29 @@ ggplot(
   ) +
   scale_fill_manual(values = region_colors) +
   labs(
-    title = "HPI Scores of the Top and Bottom 20 Countries in 2025",
+    title = "Costa Rica Leads the Highest-HPI Countries in 2025",
+    subtitle = "The 20 highest- and lowest-scoring countries show a wide gap in HPI",
     x = "HPI score",
     y = NULL,
     fill = "Region",
     caption = "Source: Happy Planet Index 2006–2025 public dataset"
   ) +
-  theme_labels
-
-
-
+  theme_labels +
+  annotate(
+    "text",
+    x = 72,
+    y = 21.5,
+    label = "Top 20",
+    hjust = 1,
+    family = "inter",
+    size = 3
+  ) +
+  annotate(
+    "text",
+    x = 72,
+    y = 19.5,
+    label = "Bottom 20",
+    hjust = 1,
+    family = "inter",
+    size = 3
+  )
