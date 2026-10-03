@@ -35,10 +35,10 @@ chart1 <- ggplot(region_summary) +
     labels = function(x) paste0(round(x / 1e6, 1), "B")
   ) +
   labs(
-    title = "Regional Happy Planet Index vs. Population Size (2025)",
-    subtitle = "Column width represents total population; height represents mean HPI score",
+    title = "Population Size and Wellbeing Vary Across Global Regions in 2025",
+    subtitle = "Column width represents total population; height represents average HPI score",
     x = "Cumulative Population (Billions)",
-    y = "Mean Happy Planet Index (HPI)",
+    y = "Average HPI Score",
     fill = "Region",
     caption = "Source: Happy Planet Index (2026 Release, Hot or Cool Institute)"
   ) +
